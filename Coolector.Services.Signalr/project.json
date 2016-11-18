@@ -1,14 +1,29 @@
 {
+  "title": "Coolector.Services.Signalr",
   "version": "1.0.0-*",
-
-  "dependencies": {
-    "Microsoft.AspNetCore.SignalR": "1.0.0-t00388f5fa",
-    "NETStandard.Library": "1.6.0"
+  "buildOptions": {
+    "emitEntryPoint": true
   },
-
+  "dependencies": {
+    "Coolector.Common": "1.0.25",
+    "Lockbox.Client": "1.0.0-beta-1",
+    "Microsoft.AspNetCore.SignalR": "1.0.0-t00388f5fa",
+    "NETStandard.Library": "1.6.1"
+  },
   "frameworks": {
-    "netstandard1.6": {
-      "imports": "dnxcore50"
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.1.0"
+        }
+      }
     }
+  },
+  "publishOptions": {
+    "include": [
+      "nlog.config",
+      "appsettings.json"
+    ]
   }
 }
