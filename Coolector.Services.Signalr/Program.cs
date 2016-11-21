@@ -1,4 +1,5 @@
-﻿using Coolector.Common.Host;
+﻿using Coolector.Common.Events.Remarks;
+using Coolector.Common.Host;
 
 namespace Coolector.Services.Signalr
 {
@@ -7,8 +8,9 @@ namespace Coolector.Services.Signalr
         public static void Main(string[] args)
         {
             WebServiceHost.Create<Startup>(port: 15000)
-                .UseAutofac(Bootstrapper.LifetimeScope)
+                .UseAutofac(Startup.LifetimeScope)
                 .UseRabbitMq(queueName: typeof(Program).Namespace)
+                .SubscribeToEvent<RemarkCreated>()
                 .Build()
                 .Run();
         }

@@ -5,10 +5,23 @@
     "emitEntryPoint": true
   },
   "dependencies": {
-    "Coolector.Common": "1.0.25",
+    "Coolector.Common": "1.0.*",
+    "Autofac": "4.1.0",
+    "Autofac.Extensions.DependencyInjection": "4.0.0",
     "Lockbox.Client": "1.0.0-beta-1",
     "Microsoft.AspNetCore.SignalR": "1.0.0-t00388f5fa",
-    "NETStandard.Library": "1.6.1"
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.AspNetCore.Hosting": "1.1.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+    "Microsoft.AspNetCore.Owin": "1.1.0",
+    "NETStandard.Library": "1.6.1",
+    "NLog.Extensions.Logging": "1.0.0-*",
+    "Polly": "5.0.1-v5-0-alpha0001",
+    "RawRabbit": "1.10.0",
+    "RawRabbit.vNext": "1.10.0",
+    "System.Runtime.Extensions": "4.3.0"
   },
   "frameworks": {
     "netcoreapp1.1": {
