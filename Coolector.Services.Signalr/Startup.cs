@@ -13,7 +13,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Nancy.Owin;
 using NLog;
 using NLog.Extensions.Logging;
 using Polly;
@@ -52,6 +51,7 @@ namespace Coolector.Services.Signalr
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddRouting();
+            services.AddCors();
             services.AddSignalR();
 
             var rmqRetryPolicy = Policy
@@ -84,7 +84,10 @@ namespace Coolector.Services.Signalr
         {
             loggerFactory.AddNLog();
             env.ConfigureNLog("nlog.config");
-            //app.UseOwin().UseNancy(x => x.Bootstrapper = new Bootstrapper(Configuration));
+            app.UseCors(builder => builder.AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+                .AllowCredentials());
             app.UseSignalR(builder => builder.MapHub<RemarksHub>("/remarks"));
 
             appLifeTime.ApplicationStopped.Register(() => LifetimeScope.Dispose());

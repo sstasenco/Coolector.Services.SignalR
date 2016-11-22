@@ -19,10 +19,5 @@ namespace Coolector.Services.Signalr.Hubs
             Logger.Debug($"Disconnected from hub, connectionId:{Context.ConnectionId}");
             return base.OnDisconnectedAsync();
         }
-
-        public async Task NotifyRemarkCreatedAsync()
-        {
-            await Clients.All.InvokeAsync("remarkCreated", "test");
-        }
     }
 }

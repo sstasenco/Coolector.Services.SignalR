@@ -9,6 +9,7 @@
     "Autofac": "4.1.0",
     "Autofac.Extensions.DependencyInjection": "4.0.0",
     "Lockbox.Client": "1.0.0-beta-1",
+    "Microsoft.AspNetCore.Cors": "1.1.0",
     "Microsoft.AspNetCore.SignalR": "1.0.0-t00388f5fa",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",

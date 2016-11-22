@@ -17,7 +17,7 @@ namespace Coolector.Services.Signalr.Handlers
 
         public async Task HandleAsync(RemarkCreated @event)
         {
-            await _hubContext.Clients.All.InvokeAsync("RemarkCreated", "test");
+            await _hubContext.Clients.All.InvokeAsync("RemarkCreated", @event);
         }
     }
 }
