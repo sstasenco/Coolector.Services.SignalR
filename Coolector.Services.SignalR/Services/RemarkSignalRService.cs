@@ -18,7 +18,7 @@ namespace Coolector.Services.SignalR.Services
 
         public async Task PublishRemarkCreatedAsync(RemarkCreated @event)
         {
-            var smallPhoto = @event.Photos.FirstOrDefault(x => x.Size == "small" && x.Size.Empty());
+            var smallPhoto = @event.Photos.FirstOrDefault(x => x.Size == "small" && x.Metadata.Empty());
             var message = new
             {
                 remarkId = @event.RemarkId,
