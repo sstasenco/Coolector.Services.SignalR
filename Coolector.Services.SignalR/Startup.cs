@@ -7,6 +7,7 @@ using Coolector.Common.Commands;
 using Coolector.Common.Events;
 using Coolector.Common.Extensions;
 using Coolector.Services.SignalR.Hubs;
+using Coolector.Services.SignalR.Services;
 using Lockbox.Client.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -74,6 +75,7 @@ namespace Coolector.Services.SignalR
             builder.Populate(services);
             builder.RegisterAssemblyTypes(assembly).AsClosedTypesOf(typeof(IEventHandler<>));
             builder.RegisterAssemblyTypes(assembly).AsClosedTypesOf(typeof(ICommandHandler<>));
+            builder.RegisterType<RemarkSignalRService>().As<IRemarkSignalRService>();
             LifetimeScope = builder.Build().BeginLifetimeScope();
 
             return new AutofacServiceProvider(LifetimeScope);

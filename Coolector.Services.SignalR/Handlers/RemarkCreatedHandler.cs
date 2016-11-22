@@ -1,23 +1,22 @@
 ﻿using System.Threading.Tasks;
 using Coolector.Common.Events;
 using Coolector.Common.Events.Remarks;
-using Coolector.Services.SignalR.Hubs;
-using Microsoft.AspNetCore.SignalR;
+using Coolector.Services.SignalR.Services;
 
 namespace Coolector.Services.SignalR.Handlers
 {
     public class RemarkCreatedHandler : IEventHandler<RemarkCreated>
     {
-        private readonly IHubContext<RemarksHub> _hubContext;
+        private readonly IRemarkSignalRService _signalRService;
 
-        public RemarkCreatedHandler(IHubContext<RemarksHub> hubContext)
+        public RemarkCreatedHandler(IRemarkSignalRService signalRService)
         {
-            _hubContext = hubContext;
+            _signalRService = signalRService;
         }
 
         public async Task HandleAsync(RemarkCreated @event)
         {
-            await _hubContext.Clients.All.InvokeAsync("RemarkCreated", @event);
+            await _signalRService.PublishRemarkCreatedAsync(@event);
         }
     }
 }
