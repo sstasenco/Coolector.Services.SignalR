@@ -11,6 +11,8 @@ namespace Coolector.Services.SignalR
                 .UseAutofac(Startup.LifetimeScope)
                 .UseRabbitMq(queueName: typeof(Program).Namespace)
                 .SubscribeToEvent<RemarkCreated>()
+                .SubscribeToEvent<RemarkResolved>()
+                .SubscribeToEvent<RemarkDeleted>()
                 .Build()
                 .Run();
         }
