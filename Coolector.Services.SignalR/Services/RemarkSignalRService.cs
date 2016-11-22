@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Coolector.Common.Extensions;
 using Coolector.Common.Events.Remarks;
 using Coolector.Services.SignalR.Hubs;
 using Microsoft.AspNetCore.SignalR;
@@ -16,9 +18,22 @@ namespace Coolector.Services.SignalR.Services
 
         public async Task PublishRemarkCreatedAsync(RemarkCreated @event)
         {
+            var smallPhoto = @event.Photos.FirstOrDefault(x => x.Size == "small" && x.Size.Empty());
             var message = new
             {
-                RemarkId = @event.RemarkId
+                remarkId = @event.RemarkId,
+                author = @event.Username,
+                category = @event.Category.Name,
+                location = new
+                {
+                    address = @event.Location.Address,
+                    coordinates = new[] { @event.Location.Longitude, @event.Location.Latitude },
+                    type = "Point"
+                },
+                smallPhotoUrl = smallPhoto?.Url,
+                description = @event.Description,
+                createdAt = @event.CreatedAt,
+                resolved = false
             };
             await _hubContext.Clients.All.InvokeAsync("RemarkCreated", message);
         }
@@ -27,18 +42,21 @@ namespace Coolector.Services.SignalR.Services
         {
             var message = new
             {
-                RemarkId = @event.RemarkId
+                remarkId = @event.RemarkId,
+                resolverId = @event.UserId,
+                resolver = @event.Username,
+                resolvedAt = @event.ResolvedAt
             };
-            await _hubContext.Clients.All.InvokeAsync("RemarkCreated", message);
+            await _hubContext.Clients.All.InvokeAsync("RemarkResolved", message);
         }
 
         public async Task PublishRemarkDeletedAsync(RemarkDeleted @event)
         {
             var message = new
             {
-                RemarkId = @event.Id
+                remarkId = @event.Id
             };
-            await _hubContext.Clients.All.InvokeAsync("RemarkCreated", message);
+            await _hubContext.Clients.All.InvokeAsync("RemarkDeleted", message);
         }
     }
 }
