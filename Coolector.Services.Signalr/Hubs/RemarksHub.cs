@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.SignalR;
 using NLog;
 
-namespace Coolector.Services.Signalr.Hubs
+namespace Coolector.Services.SignalR.Hubs
 {
     public class RemarksHub : Hub
     {

@@ -1,5 +1,5 @@
 {
-  "title": "Coolector.Services.Signalr",
+  "title": "Coolector.Services.SignalR",
   "version": "1.0.0-*",
   "buildOptions": {
     "emitEntryPoint": true

@@ -6,7 +6,7 @@ using Autofac.Extensions.DependencyInjection;
 using Coolector.Common.Commands;
 using Coolector.Common.Events;
 using Coolector.Common.Extensions;
-using Coolector.Services.Signalr.Hubs;
+using Coolector.Services.SignalR.Hubs;
 using Lockbox.Client.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,7 +21,7 @@ using RawRabbit;
 using RawRabbit.Configuration;
 using RawRabbit.vNext;
 
-namespace Coolector.Services.Signalr
+namespace Coolector.Services.SignalR
 {
     public class Startup
     {

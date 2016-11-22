@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Coolector.Services.Signalr", "Coolector.Services.Signalr\Coolector.Services.Signalr.xproj", "{33256E16-C2B7-49D4-B3C7-972315ED11BC}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Coolector.Services.SignalR", "Coolector.Services.SignalR\Coolector.Services.Signalr.xproj", "{33256E16-C2B7-49D4-B3C7-972315ED11BC}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Coolector.Services.Signalr.Tests", "Coolector.Services.Signalr.Tests\Coolector.Services.Signalr.Tests.xproj", "{3CA972F9-9932-4EFD-802D-ADD72958B877}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Coolector.Services.SignalR.Tests", "Coolector.Services.SignalR.Tests\Coolector.Services.SignalR.Tests.xproj", "{3CA972F9-9932-4EFD-802D-ADD72958B877}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Coolector.Services.Signalr.Tests.EndToEnd", "Coolector.Services.Signalr.Tests.EndToEnd\Coolector.Services.Signalr.Tests.EndToEnd.xproj", "{970F1835-4B70-4246-965D-D7C3690A2ED8}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Coolector.Services.SignalR.Tests.EndToEnd", "Coolector.Services.SignalR.Tests.EndToEnd\Coolector.Services.SignalR.Tests.EndToEnd.xproj", "{970F1835-4B70-4246-965D-D7C3690A2ED8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

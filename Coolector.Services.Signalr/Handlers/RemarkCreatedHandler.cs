@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Coolector.Common.Events;
 using Coolector.Common.Events.Remarks;
-using Coolector.Services.Signalr.Hubs;
+using Coolector.Services.SignalR.Hubs;
 using Microsoft.AspNetCore.SignalR;
 
-namespace Coolector.Services.Signalr.Handlers
+namespace Coolector.Services.SignalR.Handlers
 {
     public class RemarkCreatedHandler : IEventHandler<RemarkCreated>
     {

@@ -1,7 +1,7 @@
 ﻿using Coolector.Common.Events.Remarks;
 using Coolector.Common.Host;
 
-namespace Coolector.Services.Signalr
+namespace Coolector.Services.SignalR
 {
     public class Program
     {
