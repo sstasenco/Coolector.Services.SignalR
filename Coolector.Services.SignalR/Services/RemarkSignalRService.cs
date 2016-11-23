@@ -21,7 +21,7 @@ namespace Coolector.Services.SignalR.Services
             var smallPhoto = @event.Photos.FirstOrDefault(x => x.Size == "small" && x.Metadata.Empty());
             var message = new
             {
-                remarkId = @event.RemarkId,
+                id = @event.RemarkId,
                 author = @event.Username,
                 category = @event.Category.Name,
                 location = new
