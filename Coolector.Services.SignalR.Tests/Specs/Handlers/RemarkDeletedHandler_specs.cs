@@ -38,7 +38,7 @@ namespace Coolector.Services.Storage.Tests.Specs.Handlers
             SignalRServiceMock.Verify(x => x.PublishRemarkDeletedAsync(Moq.It.Is<RemarkDeleted>
                 (rc => rc.RequestId == RequestId
                 && rc.Id == RemarkId
-                && rc.UserId == UserId)));
+                && rc.UserId == UserId)), Times.Once);
         };
     }
 }

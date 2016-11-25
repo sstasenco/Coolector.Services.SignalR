@@ -46,7 +46,7 @@ namespace Coolector.Services.Storage.Tests.Specs.Handlers
                 && @event.RemarkId == RemarkId
                 && @event.UserId == UserId
                 && @event.Username== Username
-                && @event.ResolvedAt == ResolvedAt)));
+                && @event.ResolvedAt == ResolvedAt)), Times.Once);
         };
     }
 }

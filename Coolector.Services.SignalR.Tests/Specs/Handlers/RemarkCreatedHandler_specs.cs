@@ -52,7 +52,7 @@ namespace Coolector.Services.Storage.Tests.Specs.Handlers
                 && rc.UserId == UserId
                 && rc.Username == Username
                 && rc.Category.CategoryId == CategoryId
-                && rc.Category.Name == Category)));
+                && rc.Category.Name == Category)), Times.Once);
         };
     }
 }
