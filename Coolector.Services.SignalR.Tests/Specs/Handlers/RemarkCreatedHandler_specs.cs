@@ -8,7 +8,7 @@ using Machine.Specifications;
 using Moq;
 using It = Machine.Specifications.It;
 
-namespace Coolector.Services.Storage.Tests.Specs.Handlers
+namespace Coolector.Services.SignalR.Tests.Specs.Handlers
 {
     public abstract class RemarkCreatedHandler_specs
     {

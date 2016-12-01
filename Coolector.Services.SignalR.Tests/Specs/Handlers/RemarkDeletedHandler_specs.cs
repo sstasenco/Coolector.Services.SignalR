@@ -1,12 +1,12 @@
-﻿using Coolector.Common.Events.Remarks;
-using Machine.Specifications;
-using Moq;
-using System;
+﻿using System;
+using Coolector.Common.Events.Remarks;
 using Coolector.Services.SignalR.Handlers;
 using Coolector.Services.SignalR.Services;
+using Machine.Specifications;
+using Moq;
 using It = Machine.Specifications.It;
 
-namespace Coolector.Services.Storage.Tests.Specs.Handlers
+namespace Coolector.Services.SignalR.Tests.Specs.Handlers
 {
     public abstract class RemarkDeletedHandler_specs
     {
