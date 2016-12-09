@@ -1,5 +1,5 @@
-﻿using Coolector.Common.Events.Remarks;
-using Coolector.Common.Host;
+﻿using Coolector.Common.Host;
+using Coolector.Services.Remarks.Shared.Events;
 
 namespace Coolector.Services.SignalR
 {

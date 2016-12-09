@@ -1,5 +1,5 @@
 ﻿using System;
-using Coolector.Common.Events.Remarks;
+using Coolector.Services.Remarks.Shared.Events;
 using Coolector.Services.SignalR.Handlers;
 using Coolector.Services.SignalR.Services;
 using Machine.Specifications;

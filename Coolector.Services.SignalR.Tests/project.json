@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "Coolector.Common": "1.0.*",
+    "Coolector.Services.Remarks.Shared": "1.0.*",
     "Coolector.Services.SignalR": "1.0.0-*",
     "FluentAssertions": "4.12.0",
     "Machine.Specifications": "0.11.0",

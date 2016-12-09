@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Coolector.Common.Events.Remarks;
-using Coolector.Common.Events.Remarks.Models;
+using Coolector.Services.Remarks.Shared.Events;
+using Coolector.Services.Remarks.Shared.Events.Models;
 using Coolector.Services.SignalR.Handlers;
 using Coolector.Services.SignalR.Services;
 using Machine.Specifications;

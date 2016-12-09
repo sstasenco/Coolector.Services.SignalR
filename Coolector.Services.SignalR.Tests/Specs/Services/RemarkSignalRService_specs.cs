@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Coolector.Common.Events.Remarks;
-using Coolector.Common.Events.Remarks.Models;
+using Coolector.Services.Remarks.Shared.Events;
+using Coolector.Services.Remarks.Shared.Events.Models;
 using Coolector.Services.SignalR.Hubs;
 using Coolector.Services.SignalR.Services;
 using Coolector.Services.SignalR.Tests.Framework;

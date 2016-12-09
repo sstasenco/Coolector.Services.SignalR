@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Coolector.Common.Events.Remarks;
+using Coolector.Services.Remarks.Shared.Events;
 
 namespace Coolector.Services.SignalR.Services
 {

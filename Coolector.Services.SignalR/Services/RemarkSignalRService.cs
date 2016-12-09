@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Coolector.Common.Extensions;
-using Coolector.Common.Events.Remarks;
+using Coolector.Services.Remarks.Shared.Events;
 using Coolector.Services.SignalR.Hubs;
 using Microsoft.AspNetCore.SignalR;
 
